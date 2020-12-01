@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, b, hasil, menu;
+    float c, d, hasilbagi;
+   
+printf(" TUGAS PEMROGRAMAN AHKIR (KALKULATOR)                \n\n");
+printf(" Oleh : NYOMAN GEDE SURYA CAHYANA PUTRA 2005551136 \n\n");
+printf(" 	ANGELIN LILIN 20055511447     \n\n");
+printf(" 	Ni Ketut Reiska Rianti Widatania 2005551033 \n\n");
+   
+    printf("==============================================================================================\n");
+    printf("				Program Kalkulator Sederhana\n");
+    printf("=============================================================================================\n\n");
