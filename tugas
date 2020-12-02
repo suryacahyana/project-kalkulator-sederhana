@@ -2,8 +2,6 @@
 
 int main()
 {
-    int a, b, hasil, menu;
-    float c, d, hasilbagi;
    
 printf(" TUGAS PEMROGRAMAN AHKIR (KALKULATOR)                \n\n");
 printf(" Oleh : NYOMAN GEDE SURYA CAHYANA PUTRA 2005551136 \n\n");
