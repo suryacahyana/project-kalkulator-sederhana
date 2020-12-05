@@ -1,7 +1,9 @@
 #include <stdio.h>
 
-int main()
-{
+int main(){
+
+    int a, b, hasil, menu;
+    float c, d, hasilbagi;
    
 printf(" TUGAS PEMROGRAMAN AHKIR (KALKULATOR)                \n\n");
 printf(" Oleh : Nyoman Gede Surya Cahyana Putra 2005551136 \n\n");
