@@ -44,4 +44,23 @@ printf(" 	Ni Ketut Reiska Rianti Widatania 2005551033 \n\n");
         printf("------------------------------- -\n");
         printf("Hasil:\t\t\t   %d\n", hasil);
         break;
-        
+      case 3:
+        printf("\n1. Perkalian :\n");
+        printf("Masukan bilangan pertama : ");
+        scanf("%d", &a);
+        printf("Masukan bilangan kedua   : ");
+        scanf("%d", &b);
+        hasil = a * b;
+        printf("------------------------------- -\n");
+        printf("Hasil:\t\t\t   %d\n", hasil);
+        break;
+    case 4:
+        printf("\n1. Pembagian :\n");
+        printf("Masukan bilangan pertama : ");
+        scanf("%d", &a);
+        printf("Masukan bilangan kedua   : ");
+        scanf("%d", &b);
+        hasil = a : b;
+        printf("------------------------------- -\n");
+        printf("Hasil:\t\t\t   %d\n", hasil);
+        break;
