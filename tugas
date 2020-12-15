@@ -14,13 +14,13 @@ printf(" 	Ni Ketut Reiska Rianti Widatania 2005551033 \n\n");
     printf("				Program Kalkulator Sederhana\n");
     printf("=============================================================================================\n\n");
 	
-	menu:
+    menu:
     printf("\tMenu :\n");
     printf("\t1. Penjumlahan\n");
     printf("\t2. Pengurangan\n");
     printf("\t3. Perkalian\n");
     printf("\t4. Pembagian\n");
-	printf("\t5. Keluar Program\n");
+    printf("\t5. Keluar Program\n");
 
     printf("Pilih menu : ");
     scanf("%d",&menu);
@@ -67,8 +67,8 @@ printf(" 	Ni Ketut Reiska Rianti Widatania 2005551033 \n\n");
         printf("Hasil:\t\t\t   %d\n", hasil);
         goto menu; 
     case 5:
-		printf("\n\tTerima Kasih Telah Menggunakan Program Kami \n");
-		goto end;
+	printf("\n\tTerima Kasih Telah Menggunakan Program Kami \n");
+	goto end;
         default:
         printf("Anda salah memilih menu. \n");
         goto menu;
