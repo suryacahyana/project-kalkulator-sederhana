@@ -13,12 +13,14 @@ printf(" 	Ni Ketut Reiska Rianti Widatania 2005551033 \n\n");
     printf("==============================================================================================\n");
     printf("				Program Kalkulator Sederhana\n");
     printf("=============================================================================================\n\n");
-    
+	
+	menu:
     printf("\tMenu :\n");
     printf("\t1. Penjumlahan\n");
     printf("\t2. Pengurangan\n");
     printf("\t3. Perkalian\n");
     printf("\t4. Pembagian\n");
+	printf("\t5. Keluar Program\n");
 
     printf("Pilih menu : ");
     scanf("%d",&menu);
@@ -33,7 +35,7 @@ printf(" 	Ni Ketut Reiska Rianti Widatania 2005551033 \n\n");
         hasil = a + b;
         printf("------------------------------- +\n");
         printf("Hasil:\t\t\t   %d\n", hasil);
-        break;
+        goto menu;
     case 2:
         printf("\n1. Pengurangan :\n");
         printf("Masukan bilangan pertama : ");
@@ -43,7 +45,7 @@ printf(" 	Ni Ketut Reiska Rianti Widatania 2005551033 \n\n");
         hasil = a - b;
         printf("------------------------------- -\n");
         printf("Hasil:\t\t\t   %d\n", hasil);
-        break;
+        goto menu;
       case 3:
         printf("\n1. Perkalian :\n");
         printf("Masukan bilangan pertama : ");
@@ -53,17 +55,24 @@ printf(" 	Ni Ketut Reiska Rianti Widatania 2005551033 \n\n");
         hasil = a * b;
         printf("------------------------------- -\n");
         printf("Hasil:\t\t\t   %d\n", hasil);
-        break;
+        goto menu;
     case 4:
         printf("\n1. Pembagian :\n");
         printf("Masukan bilangan pertama : ");
         scanf("%d", &a);
         printf("Masukan bilangan kedua   : ");
         scanf("%d", &b);
-        hasil = a : b;
+        hasil = a / b;
         printf("------------------------------- -\n");
         printf("Hasil:\t\t\t   %d\n", hasil);
-        break;
-         }
+        goto menu; 
+    case 5:
+		printf("\n\tTerima Kasih Telah Menggunakan Program Kami \n");
+		goto end;
+        default:
+        printf("Anda salah memilih menu. \n");
+        goto menu;
+    }
+	end:
     return 0;
 }
