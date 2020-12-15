@@ -64,3 +64,6 @@ printf(" 	Ni Ketut Reiska Rianti Widatania 2005551033 \n\n");
         printf("------------------------------- -\n");
         printf("Hasil:\t\t\t   %d\n", hasil);
         break;
+         }
+    return 0;
+}
