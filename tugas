@@ -1,4 +1,12 @@
-#include <stdio.h>
+#include <iostream>
+#include <windows.h>
+
+using namespace std;
+void setcolor(unsigned short color)
+{
+HANDLE hCon = GetStdHandle(STD_OUTPUT_HANDLE);
+SetConsoleTextAttribute(hCon,color);
+}
 
 int main(){
 
@@ -67,8 +75,22 @@ printf(" 	Ni Ketut Reiska Rianti Widatania 2005551033 \n\n");
         printf("Hasil:\t\t\t   %d\n", hasil);
         goto menu; 
     case 5:
-	printf("\n\tTerima Kasih Telah Menggunakan Program Kami \n");
-	goto end;
+	system("cls");
+	printf ("\n\n\n\t\t\t\t>>>>>>>>>>>>>>>>>>>>>>>>>END<<<<<<<<<<<<<<<<<<<<<<<<<\n\n\n");
+	printf ("\t\t\t\t\t\t    TERIMA KASIH\n");
+	printf ("\t\t\t\t\t\t    BY KELOMPOK 16\n\n");
+	printf ("\t\t\t\t silah tekan tanda kali(X) jika ingin keluar (w).\n");
+
+	while(1){
+	system ("color 01");
+	system ("color 02");
+	system ("color 03");
+	system ("color 04");
+	system ("color 05");
+	system ("color 06");
+	system ("color 08");
+	system ("color 09");
+    }
         default:
         printf("Anda salah memilih menu. \n");
         goto menu;
