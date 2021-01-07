@@ -1,88 +1,185 @@
+#include <cstdlib>
 #include <iostream>
+#include <math.h>
+#include <cmath>
 
-int main(){
+using namespace std;
+class kalkulator{
 
-    int a, b, hasil, menu;
-    float c, d, hasilbagi;
-   
-printf(" TUGAS PEMROGRAMAN AHKIR (KALKULATOR)                \n\n");
-printf(" Oleh : Nyoman Gede Surya Cahyana Putra 2005551136 \n\n");
-printf(" 	Angelin Liling 20055511447     \n\n");
-printf(" 	Ni Ketut Reiska Rianti Widatania 2005551033 \n\n");
-   
-    printf("==============================================================================================\n");
-    printf("				Program Kalkulator Sederhana\n");
-    printf("=============================================================================================\n\n");
-	
-    menu:
-    printf("\tMenu :\n");
-    printf("\t1. Penjumlahan\n");
-    printf("\t2. Pengurangan\n");
-    printf("\t3. Perkalian\n");
-    printf("\t4. Pembagian\n");
-    printf("\t5. Keluar Program\n");
+      public:
+             void pemilihan();
+             void akar();
+             void pangkat();
+             void sinus();
+             void cosinus();
+             void tangen();
+             void casin();
+             void cacos();
+             void catan();
+             void cexp();
+             void clog();
+     private:
+              float a,b,hasil;
+     };
 
-    printf("Pilih menu : ");
-    scanf("%d",&menu);
-    printf("-------------------------------\n");
-    switch (menu){
-      case 1:
-        printf("\n1. Penjumlahan :\n");
-        printf("Masukan bilangan pertama : ");
-        scanf("%d", &a);
-        printf("Masukan bilangan kedua   : ");
-        scanf("%d", &b);
-        hasil = a + b;
-        printf("------------------------------- +\n");
-        printf("Hasil:\t\t\t   %d\n", hasil);
-        goto menu;
-    case 2:
-        printf("\n1. Pengurangan :\n");
-        printf("Masukan bilangan pertama : ");
-        scanf("%d", &a);
-        printf("Masukan bilangan kedua   : ");
-        scanf("%d", &b);
-        hasil = a - b;
-        printf("------------------------------- -\n");
-        printf("Hasil:\t\t\t   %d\n", hasil);
-        goto menu;
-      case 3:
-        printf("\n1. Perkalian :\n");
-        printf("Masukan bilangan pertama : ");
-        scanf("%d", &a);
-        printf("Masukan bilangan kedua   : ");
-        scanf("%d", &b);
-        hasil = a * b;
-        printf("------------------------------- -\n");
-        printf("Hasil:\t\t\t   %d\n", hasil);
-        goto menu;
-    case 4:
-        printf("\n1. Pembagian :\n");
-        printf("Masukan bilangan pertama : ");
-        scanf("%d", &a);
-        printf("Masukan bilangan kedua   : ");
-        scanf("%d", &b);
-        hasil = a / b;
-        printf("------------------------------- -\n");
-        printf("Hasil:\t\t\t   %d\n", hasil);
-        goto menu; 
-    case 5:
-	system("cls");
-		printf ("\t\t\t\t\tTERIMA KASIH TELAH MENGGUNAKAN PROGRAM KAMI\n");
-		printf ("\t\t\t\t\tsilah tekan tanda X(Close) jika ingin keluar\n");
+void kalkulator::pemilihan(){
+     int p;
+     cout<<"                ============================"<<endl;
+     cout<<"                program kalkulator scientific"<<endl;
+     cout<<"                ============================"<<endl;
+     cout<<endl;
+     cout<<"======================================================="<<endl;
+     cout<<"Daftar Operasi Yang Bisa Dikerjakan Oleh Kalkulator Ini"<<endl;
+     cout<<"======================================================="<<endl;
+     cout<<endl;
+     cout<<"1.akar\t\t6.asin\n";
+     cout<<"2.pangkat\t7.acos\n";
+     cout<<"3.sin\t\t8.atan\n";
+     cout<<"4.cos\t\t9.exponen\n";
+     cout<<"5.tan\t\t10.log\n";
+     cout<<endl;
+     cout<<"masukkan no operator yang akan anda pergunakan : ";
+     cin>>p;
+     system ("cls");
+     switch(p){
+               case 1 : akar();system ("PAUSE");system ("cls");
+     return pemilihan();break;
+               case 2 : pangkat();system ("PAUSE");system ("cls");
+     return pemilihan();break;
+               case 3 : sinus();system ("PAUSE");system ("cls");
+     return pemilihan();break;
+               case 4 : cosinus();system ("PAUSE");system ("cls");
+     return pemilihan();break;
+               case 5 : tangen();system ("PAUSE");system ("cls");
+     return pemilihan();break;
+               case 6 : casin();system ("PAUSE");system ("cls");
+     return pemilihan();break;
+               case 7 : cacos();system ("PAUSE");system ("cls");
+     return pemilihan();break;
+               case 8 : catan();system ("PAUSE");system ("cls");
+     return pemilihan();break;
+               case 9 : cexp();system ("PAUSE");system ("cls");
+     return pemilihan();break;
+               case 10: clog();system ("PAUSE");system ("cls");
+     return pemilihan();break;
+               default:
+                       cout<<"Anda memilih nomer yang salah......!!!"<<endl;
+                       cout<<"silahkan coba lagi"<<endl;
+                       system ("PAUSE");system ("cls");
+     return pemilihan();break;}
+                       }
 
-	while(1){
-	system ("color 01");
-	system ("color 02");
-	system ("color 03");
-	system ("color 04");
-	system ("color 05");
-	system ("color 06");
-	system ("color 08");
-	system ("color 09");
-	system ("color 11");
-    }
+void kalkulator::akar(){
+     cout<<"            ============================="<<endl;
+     cout<<"              Anda memilih operasi akar"<<endl;
+     cout<<"            ============================="<<endl;
+     cout<<endl;
+     cout<<"Masukan inputan untuk akar              : ";
+     cin>>a;
+     hasil=sqrt(a);
+     cout<<"hasil akarnya adalah                    : "<<hasil<<endl;
 
-   
-}
+     }
+void kalkulator::pangkat(){
+     cout<<"               =============================="<<endl;
+     cout<<"                Anda memilih operasi pangkat"<<endl;
+     cout<<"               =============================="<<endl;
+     cout<<endl;
+     cout<<"Masukan inputan yang dipangkatkan       : ";
+     cin>>a;
+     cout<<"Masukan inputan untuk pangkatnya        : ";
+     cin>>b;
+     hasil=pow(a,b);
+     cout<<"hasil pangkatnya adalah                 : "<<hasil<<endl;
+
+     }
+void kalkulator::sinus(){
+     cout<<              "=============================="<<endl;
+     cout<<"                Anda memilih operasi sinus"<<endl;
+     cout<<"              =============================="<<endl;
+     cout<<endl;
+     cout<<"Masukan inputan  sinus                  : ";
+     cin>>a;
+     hasil=sin(a);
+     cout<<"hasil sinusnya adalah                   : "<<hasil<<endl;
+
+     }
+void kalkulator::cosinus(){
+     cout<<"               =============================="<<endl;
+     cout<<"                Anda memilih operasi cosinus"<<endl;
+     cout<<"               =============================="<<endl;
+     cout<<endl;
+     cout<<"Masukan inputan untuk cosinus           : ";
+     cin>>a;
+     hasil=cos(a);
+     cout<<"hasil cosinusnya adalah                 : "<<hasil<<endl;
+
+     }
+void kalkulator::tangen(){
+     cout<<"              ============================="<<endl;
+     cout<<"               Anda memilih opersi tangen"<<endl;
+     cout<<"              ============================="<<endl;
+     cout<<endl;
+     cout<<"Masukan inputan untuk tangen            : ";
+     cin>>a;
+     hasil=tan(a);
+     cout<<"hasil tangennya adalah                  : "<<hasil<<endl;
+
+     }
+void kalkulator::casin(){
+     cout<<"             ============================="<<endl;
+     cout<<"               Anda memilih opersi asin"<<endl;
+     cout<<"             ============================="<<endl;
+     cout<<"Masukan inputan untuk asin              : ";
+     cin>>a;
+     hasil=asin(a);
+     cout<<"hasil asinnya adalah                    : "<<hasil<<endl;
+
+     }
+void kalkulator::cacos(){
+     cout<<"             ============================="<<endl;
+     cout<<"               Anda memilih opersi acos"<<endl;
+     cout<<"             ============================="<<endl;
+     cout<<"Masukan inputan untuk acos              : ";
+     cin>>a;
+     hasil=acos(a);
+     cout<<"hasil acosnya adalah                    : "<<hasil<<endl;
+
+     }
+void kalkulator::catan(){
+     cout<<"             ============================="<<endl;
+     cout<<"               Anda memilih opersi atan"<<endl;
+     cout<<"             ============================="<<endl;
+     cout<<"Masukan inputan untuk atan              : ";
+     cin>>a;
+     hasil=atan(a);
+     cout<<"hasil atannya adalah                    : "<<hasil<<endl;
+
+     }
+void kalkulator::cexp(){
+     cout<<"            ============================="<<endl;
+     cout<<"             Anda memilih opersi exponen"<<endl;
+     cout<<"            ============================="<<endl;
+     cout<<"Masukan inputan untuk exponen           : ";
+     cin>>a;
+     hasil=exp(a);
+     cout<<"hasil exponennya adalah                 : "<<hasil<<endl;
+
+     }
+void kalkulator::clog(){
+     cout<<"            ============================="<<endl;
+     cout<<"               Anda memilih opersi log"<<endl;
+     cout<<"            ============================="<<endl;
+     cout<<"Masukan inputan untuk log               : ";
+     cin>>a;
+     hasil=log(a);
+     cout<<"hasil lognya adalah                     : "<<hasil<<endl;
+
+     }               
+int main()
+{
+    kalkulator x;
+    x.pemilihan();
+    system("PAUSE");
+    return EXIT_SUCCESS;
 }
