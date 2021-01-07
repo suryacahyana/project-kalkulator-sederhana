@@ -1,185 +1,393 @@
-#include <cstdlib>
-#include <iostream>
+#include <iomanip>
 #include <math.h>
 #include <cmath>
+#include <cstdlib>
+#include <string.h>
+#include "iostream"
+
 
 using namespace std;
-class kalkulator{
+int main(){
 
-      public:
-             void pemilihan();
-             void akar();
-             void pangkat();
-             void sinus();
-             void cosinus();
-             void tangen();
-             void casin();
-             void cacos();
-             void catan();
-             void cexp();
-             void clog();
-     private:
-              float a,b,hasil;
-     };
 
-void kalkulator::pemilihan(){
-     int p;
-     cout<<"                ============================"<<endl;
-     cout<<"                program kalkulator scientific"<<endl;
-     cout<<"                ============================"<<endl;
-     cout<<endl;
-     cout<<"======================================================="<<endl;
-     cout<<"Daftar Operasi Yang Bisa Dikerjakan Oleh Kalkulator Ini"<<endl;
-     cout<<"======================================================="<<endl;
-     cout<<endl;
-     cout<<"1.akar\t\t6.asin\n";
-     cout<<"2.pangkat\t7.acos\n";
-     cout<<"3.sin\t\t8.atan\n";
-     cout<<"4.cos\t\t9.exponen\n";
-     cout<<"5.tan\t\t10.log\n";
-     cout<<endl;
-     cout<<"masukkan no operator yang akan anda pergunakan : ";
-     cin>>p;
-     system ("cls");
-     switch(p){
-               case 1 : akar();system ("PAUSE");system ("cls");
-     return pemilihan();break;
-               case 2 : pangkat();system ("PAUSE");system ("cls");
-     return pemilihan();break;
-               case 3 : sinus();system ("PAUSE");system ("cls");
-     return pemilihan();break;
-               case 4 : cosinus();system ("PAUSE");system ("cls");
-     return pemilihan();break;
-               case 5 : tangen();system ("PAUSE");system ("cls");
-     return pemilihan();break;
-               case 6 : casin();system ("PAUSE");system ("cls");
-     return pemilihan();break;
-               case 7 : cacos();system ("PAUSE");system ("cls");
-     return pemilihan();break;
-               case 8 : catan();system ("PAUSE");system ("cls");
-     return pemilihan();break;
-               case 9 : cexp();system ("PAUSE");system ("cls");
-     return pemilihan();break;
-               case 10: clog();system ("PAUSE");system ("cls");
-     return pemilihan();break;
-               default:
-                       cout<<"Anda memilih nomer yang salah......!!!"<<endl;
-                       cout<<"silahkan coba lagi"<<endl;
-                       system ("PAUSE");system ("cls");
-     return pemilihan();break;}
-                       }
+    int decimalNum,binaryNo[20], z=0;;
+	int I=0;
+    char hexDecNum[10];
+	int octalNum, rev=0, rem, chk=0;
+    char binaryNum[40] = "";
+	int menu, Detik, J, M, D, Y, p, n,i=1, k, desimal;
+	int  a, b, hasil, j, decimalkeOctal(int desimal);
+    int biner[10];
+	double x,sin_,cos_,tan_;
+	float c, d, hasilbagi, cel,fah,rea,kel,rp,dol,yen,peso, v,s,t, akar, clog, sinus, cosinus, pi=3.14,
+	exponen, massa, tinggi, kecepatan, potensial, kinetik, mekanik ;
+	struct{
+    int hari,bulan, tahun;
+	} masuk, keluar, selisih;
+	int main(int argc, char** argv);
 
-void kalkulator::akar(){
-     cout<<"            ============================="<<endl;
-     cout<<"              Anda memilih operasi akar"<<endl;
-     cout<<"            ============================="<<endl;
-     cout<<endl;
-     cout<<"Masukan inputan untuk akar              : ";
-     cin>>a;
-     hasil=sqrt(a);
-     cout<<"hasil akarnya adalah                    : "<<hasil<<endl;
+printf("TUGAS PEMROGRAMAN AHKIR (KALKULATOR)                \n\n");
+printf(" Oleh : Nyoman Gede Surya Cahyana Putra 2005551136 \n\n");
+printf(" 	Angelin Lilin 20055511447     \n\n");
+printf(" 	Ni Ketut Reiska Rianti Widatania 2005551033 \n\n");
 
-     }
-void kalkulator::pangkat(){
-     cout<<"               =============================="<<endl;
-     cout<<"                Anda memilih operasi pangkat"<<endl;
-     cout<<"               =============================="<<endl;
-     cout<<endl;
-     cout<<"Masukan inputan yang dipangkatkan       : ";
-     cin>>a;
-     cout<<"Masukan inputan untuk pangkatnya        : ";
-     cin>>b;
-     hasil=pow(a,b);
-     cout<<"hasil pangkatnya adalah                 : "<<hasil<<endl;
+    printf("==============================================================================================\n");
+    printf("				Program Kalkulator Sederhana\n");
+    printf("=============================================================================================\n\n");
 
-     }
-void kalkulator::sinus(){
-     cout<<              "=============================="<<endl;
-     cout<<"                Anda memilih operasi sinus"<<endl;
-     cout<<"              =============================="<<endl;
-     cout<<endl;
-     cout<<"Masukan inputan  sinus                  : ";
-     cin>>a;
-     hasil=sin(a);
-     cout<<"hasil sinusnya adalah                   : "<<hasil<<endl;
+    menu:
+    printf("\tMenu :\n");
+    printf("\t1. Penjumlahan\t");           printf("\t11. Log\n");
+    printf("\t2. Pengurangan\t");           printf("\t12. Sin cos tan\n");
+    printf("\t3. Perkalian\t");             printf("\t13. exponen\n");
+    printf("\t4. Pembagian\t");             printf("\t14. Bin\n");
+	printf("\t5. Suhu\t\t");                printf("\t15. Oktal\n");
+	printf("\t6. Mata Uang\t");             printf("\t16. Hexadecimal\n");
+	printf("\t7. Jarak dan Waktu");         printf("\t17. Decimal\n");
+	printf("\t8. Waktu\t");                 printf("\t18. Perhitungan Tanggal\n");
+	printf("\t9. Kuadrat\t");               printf("\t19. Energi\n");
+	printf("\t10. Akar\t");                 printf("\t20. Keluar Program\n");
 
-     }
-void kalkulator::cosinus(){
-     cout<<"               =============================="<<endl;
-     cout<<"                Anda memilih operasi cosinus"<<endl;
-     cout<<"               =============================="<<endl;
-     cout<<endl;
-     cout<<"Masukan inputan untuk cosinus           : ";
-     cin>>a;
-     hasil=cos(a);
-     cout<<"hasil cosinusnya adalah                 : "<<hasil<<endl;
 
-     }
-void kalkulator::tangen(){
-     cout<<"              ============================="<<endl;
-     cout<<"               Anda memilih opersi tangen"<<endl;
-     cout<<"              ============================="<<endl;
-     cout<<endl;
-     cout<<"Masukan inputan untuk tangen            : ";
-     cin>>a;
-     hasil=tan(a);
-     cout<<"hasil tangennya adalah                  : "<<hasil<<endl;
 
-     }
-void kalkulator::casin(){
-     cout<<"             ============================="<<endl;
-     cout<<"               Anda memilih opersi asin"<<endl;
-     cout<<"             ============================="<<endl;
-     cout<<"Masukan inputan untuk asin              : ";
-     cin>>a;
-     hasil=asin(a);
-     cout<<"hasil asinnya adalah                    : "<<hasil<<endl;
+    printf("Pilih menu : ");
+    scanf("%d",&menu);
+    printf("-------------------------------\n");
+    switch (menu){
+      case 1:
+          printf("\n1. Penjumlahan :\n");
+        printf("Masukan bilangan pertama : ");
+        scanf("%d", &a);
+        printf("Masukan bilangan kedua   : ");
+        scanf("%d", &b);
+        hasil = a + b;
+        printf("------------------------------- +\n");
+        printf("Hasil:\t\t\t   %d\n", hasil);
+        goto menu;
+    case 2:
+         printf("\n1. Pengurangan :\n");
+        printf("Masukan bilangan pertama : ");
+        scanf("%d", &a);
+        printf("Masukan bilangan kedua   : ");
+        scanf("%d", &b);
+        hasil = a - b;
+        printf("------------------------------- -\n");
+        printf("Hasil:\t\t\t   %d\n", hasil);
+        goto menu;
+      case 3:
+        printf("\n1. Perkalian :\n");
+        printf("Masukan bilangan pertama : ");
+        scanf("%d", &a);
+        printf("Masukan bilangan kedua   : ");
+        scanf("%d", &b);
+        hasil = a * b;
+        printf("------------------------------- x\n");
+        printf("Hasil:\t\t\t   %d\n", hasil);
+        goto menu;
+    case 4:
+         printf("\n1. Pembagian :\n");
+        printf("Masukan bilangan pertama : ");
+        scanf("%f", &c);
+        printf("Masukan bilangan kedua   : ");
+        scanf("%f", &d);
+        hasilbagi = c / d;
+        printf("------------------------------- :\n");
+        printf("Hasil:\t\t\t   %.2f\n", hasilbagi);
+        goto menu;
+    case 5:
+		cout<<"masukan suhu celsius yang akan dikonversi ";
+        cin>>cel;
+        fah=((9/5)*cel)+32;
+        rea=((4/9)*cel)-32;
+        kel=273+cel;
+        cout<<"Konversi suhu celsius ke fahrenheit "<<fah<<" ke reamur "<<rea<<" ke kelvin "<<kel<<endl;
+        goto menu;
 
-     }
-void kalkulator::cacos(){
-     cout<<"             ============================="<<endl;
-     cout<<"               Anda memilih opersi acos"<<endl;
-     cout<<"             ============================="<<endl;
-     cout<<"Masukan inputan untuk acos              : ";
-     cin>>a;
-     hasil=acos(a);
-     cout<<"hasil acosnya adalah                    : "<<hasil<<endl;
+	case 6:
+		cout<<"masukan uang rupiah yang akan dikonversi ";
+        cin>>rp;
+        dol=rp/13000;
+        yen=rp/5000;
+        peso=rp/4000;
+        cout<<"Konversi uang rupiah ke dolar "<<dol<<" ke yen "<<yen<<" ke peso "<<peso<<endl;
+		 goto menu;
 
-     }
-void kalkulator::catan(){
-     cout<<"             ============================="<<endl;
-     cout<<"               Anda memilih opersi atan"<<endl;
-     cout<<"             ============================="<<endl;
-     cout<<"Masukan inputan untuk atan              : ";
-     cin>>a;
-     hasil=atan(a);
-     cout<<"hasil atannya adalah                    : "<<hasil<<endl;
+	case 7:
+		cout<<"Masukan Jarak Tempuh (Km)  : ";
+		cin>>s;
+		cout<<"Masukan Waktu Tempuh (Jam) : ";
+		cin>>t;
+		v=s/t;
+		cout<<"Kecepatan (Km/jam)         : "<<v<<endl;
+		goto menu;
 
-     }
-void kalkulator::cexp(){
-     cout<<"            ============================="<<endl;
-     cout<<"             Anda memilih opersi exponen"<<endl;
-     cout<<"            ============================="<<endl;
-     cout<<"Masukan inputan untuk exponen           : ";
-     cin>>a;
-     hasil=exp(a);
-     cout<<"hasil exponennya adalah                 : "<<hasil<<endl;
+	case 8:
+		  cout<<"masukan nilai ?"<<endl;
+ 	 	cin >> Detik;
+  		J = Detik / 3600;
+  		Y = Detik % 3600;
+  		M = Y / 60;
+  		D = Y % 60;
+    	cout<<J<<" jam"<<endl;
+    	cout<<M<<" menit"<<endl;
+   		cout<<D<<" detik"<<endl;
+		goto menu;
 
-     }
-void kalkulator::clog(){
-     cout<<"            ============================="<<endl;
-     cout<<"               Anda memilih opersi log"<<endl;
-     cout<<"            ============================="<<endl;
-     cout<<"Masukan inputan untuk log               : ";
-     cin>>a;
-     hasil=log(a);
-     cout<<"hasil lognya adalah                     : "<<hasil<<endl;
+	case 9:
+		 cout<<"  Masukkan bilangan : "; cin>>a;
+ 		hasil = a * a;
+ 		cout<<"  Hasil dari "<<a<<" pangkat 2 = "<<hasil<<endl;
+ 		goto menu;
 
-     }               
-int main()
-{
-    kalkulator x;
-    x.pemilihan();
-    system("PAUSE");
-    return EXIT_SUCCESS;
+	case 10:
+		cout<<"Masukan inputan untuk akar              : ";
+    	cin>>a;
+     	hasil=sqrt(a);
+    	cout<<"hasil akarnya adalah                    : "<<hasil<<endl;
+		goto menu;
+
+	case 11:
+		cout<<"Masukan inputan untuk log               : ";
+     	cin>>a;
+     	hasil=log(a);
+    	 cout<<"hasil lognya adalah                     : "<<hasil<<endl;
+		goto menu;
+
+	case 12:
+	    cout<<"masukkan nilai =";cin>>x;
+
+        sin_ = sin (x*pi/180);
+        cos_ = cos(x*pi/180);
+        tan_ = tan(x*pi/180);
+        cout<<"sin = "<<sin_<<endl;
+        cout<<"cos = "<<cos_<<endl;
+        cout<<"tan = "<<tan_<<endl;
+     	goto menu;
+
+	case 13:
+		cout<<"Masukan inputan untuk exponen           : ";
+    	cin>>a;
+     	hasil=exp(a);
+     	cout<<"hasil exponennya adalah                 : "<<hasil<<endl;
+     	goto menu;
+
+     case 14:
+		printf("Masukkan bilangan\t:");
+    	scanf("%d",&n);
+    	while(n>0){
+        biner[i]=n%2;
+         n=n/2;
+         i=i+1;
+         k=i;
+
+    }
+   		 for(j=k-1;j>0;j--)
+        {
+        printf("%d",biner[j]);
+    }
+		goto menu;
+        case 15:
+        cout<<"Enter the Octal Number: ";
+        cin>>octalNum;
+        while(octalNum!=0)
+    {
+        rem = octalNum%10;
+        if(rem>7)
+        {
+            chk++;
+            break;
+        }
+        rev = (rev*10) + rem;
+        octalNum = octalNum/10;
+    }
+        if(chk==0)
+    {
+        octalNum = rev;
+        cout<<"\nEquivalent Binary Value: ";
+        while(octalNum!=0)
+        {
+            rem = octalNum%10;
+            switch(rem)
+            {
+                case 0: strcat(binaryNum, "000");
+                    break;
+                case 1: strcat(binaryNum, "001");
+                    break;
+                case 2: strcat(binaryNum, "010");
+                    break;
+                case 3: strcat(binaryNum, "011");
+                    break;
+                case 4: strcat(binaryNum, "100");
+                    break;
+                case 5: strcat(binaryNum, "101");
+                    break;
+                case 6: strcat(binaryNum, "110");
+                    break;
+                case 7: strcat(binaryNum, "111");
+                    break;
+            }
+            octalNum = octalNum/10;
+        }
+        cout<<binaryNum;
+    }
+        else
+        cout<<"\nInvalid Octal Digit!";
+        cout<<endl;
+        goto menu;
+
+	case 16:
+        cout<<"Enter the Hexadecimal Number: ";
+        cin>>hexDecNum;
+        cout<<"\nEquivalent Binary Value = ";
+        while(hexDecNum[I])
+    {
+        switch(hexDecNum[I])
+        {
+            case '0':
+                cout<<"0000";
+                break;
+            case '1':
+                cout<<"0001";
+                break;
+            case '2':
+                cout<<"0010";
+                break;
+            case '3':
+                cout<<"0011";
+                break;
+            case '4':
+                cout<<"0100";
+                break;
+            case '5':
+                cout<<"0101";
+                break;
+            case '6':
+                cout<<"0110";
+                break;
+            case '7':
+                cout<<"0111";
+                break;
+            case '8':
+                cout<<"1000";
+                break;
+            case '9':
+                cout<<"1001";
+                break;
+            case 'A':
+            case 'a':
+                cout<<"1010";
+                break;
+            case 'B':
+            case 'b':
+                cout<<"1011";
+                break;
+            case 'C':
+            case 'c':
+                cout<<"1100";
+                break;
+            case 'D':
+            case 'd':
+                cout<<"1101";
+                break;
+            case 'E':
+            case 'e':
+                cout<<"1110";
+                break;
+            case 'F':
+            case 'f':
+                cout<<"1111";
+                break;
+            default:
+                cout<<"--Invalid Hex Digit ("<<hexDecNum[i]<<")--";
+        }
+        I++;
+    }
+        cout<<endl;
+		goto menu;
+
+	case 17:
+		cout<<"Enter the Decimal Number: ";
+        cin>>decimalNum;
+        while(decimalNum!=0)
+    {
+        binaryNo[i] = decimalNum%2;
+        i++;
+        decimalNum = decimalNum/2;
+    }
+        cout<<"\nEquivalent Binary Value: ";
+        for(z=(z-1); z>=0; z--)
+        cout<<binaryNo[z];
+        cout<<endl;
+        goto menu;
+
+	case 18:
+        cout<<"Date Awal"<<endl;
+        cout<<"Masukan Tahun : ";cin>>masuk.tahun;
+        cout<<"Masukan Bulan : ";cin>>masuk.bulan;
+        cout<<"Masukan Tanggal :";cin>>masuk.hari;
+
+        cout<<endl<<endl;
+
+        cout<<"Date akhir"<<endl;
+        cout<<"Masukan Tahun : ";cin>>keluar.tahun;
+        cout<<"Masukan Bulan : ";cin>>keluar.bulan;
+        cout<<"Masukan Tanggal :";cin>>keluar.hari;
+
+        if((keluar.hari-masuk.hari)<0){
+        selisih.hari=((30+keluar.hari)-masuk.hari);
+    }    else {
+        selisih.hari=keluar.hari-masuk.hari;
+    }
+        if((keluar.bulan-masuk.bulan<0)){
+        selisih.bulan=(12+keluar.bulan-masuk.bulan);
+            selisih.tahun=keluar.tahun-masuk.tahun-1;
+    }   else {
+        selisih.bulan=keluar.bulan-masuk.bulan;
+        selisih.tahun=keluar.tahun-masuk.tahun;
+    }
+
+        cout<<endl<<endl;
+
+        cout<<"Selisih dalam Hari = "<<selisih.tahun*365+selisih.bulan*30+selisih.hari;
+
+        cout<<endl;
+        cout<<"Selisih Date Awal dan Akhir"<<endl;
+        cout<<selisih.tahun<<" tahun ";
+        cout<<selisih.bulan<<" bulan";
+        cout<<selisih.hari<<" tanggal ";
+        goto menu;
+
+	case 19:
+        cout << "Program Menghitung Energi Mekanik Suatu Benda" <<endl<<endl;
+
+        cout << "masukkan Massa Benda : ";
+        cin>> massa;
+        cout << "masukkan Tinggi Benda : ";
+        cin>> tinggi;
+        cout << "masukkan Kecepatan Benda : ";
+        cin>> kecepatan;
+
+        potensial = massa*9.8*tinggi;
+        kinetik = massa/2*(kecepatan*kecepatan);
+        mekanik = potensial + kinetik;
+
+        cout << endl;
+        cout << "Energi Potensialnya Adalah : " << potensial <<endl;
+        cout << "Energi Kinetiknya Adalah : " << kinetik <<endl;
+        cout << "Energi Mekaniknya Adalah : " << mekanik <<endl;
+        goto menu;
+
+	case 20:
+        printf("\n\tTerima Kasih Telah Menggunakan Program Kami \n");
+		goto end;
+        default:
+        printf("Anda salah memilih menu. \n");
+        goto menu;
+    }
+	end:
+    return 0;
 }
+
+
+
+
