@@ -10,19 +10,20 @@ using namespace std;
 int main(){
 
 
-    int decimalNum,binaryNo[20], z=0;;
+    	int decimalNum,binaryNo[20], z=0;;
 	int I=0;
-    char hexDecNum[10];
+    	char hexDecNum[10];
 	int octalNum, rev=0, rem, chk=0;
-    char binaryNum[40] = "";
+    	char binaryNum[40] = "";
 	int menu, Detik, J, M, D, Y, p, n,i=1, k, desimal;
 	int  a, b, hasil, j, decimalkeOctal(int desimal);
-    int biner[10];
+    	double ex, sq, lo;
+	int biner[10];
 	double x,sin_,cos_,tan_;
 	float c, d, hasilbagi, cel,fah,rea,kel,rp,dol,yen,peso, v,s,t, akar, clog, sinus, cosinus, pi=3.14,
 	exponen, massa, tinggi, kecepatan, potensial, kinetik, mekanik ;
 	struct{
-    int hari,bulan, tahun;
+    	int hari,bulan, tahun;
 	} masuk, keluar, selisih;
 	int main(int argc, char** argv);
 
@@ -141,15 +142,15 @@ printf(" 	Ni Ketut Reiska Rianti Widatania 2005551033 \n\n");
 
 	case 10:
 		cout<<"Masukan inputan untuk akar              : ";
-    	cin>>a;
-     	hasil=sqrt(a);
+    	cin>>ex;
+     	hasil=sqrt(ex);
     	cout<<"hasil akarnya adalah                    : "<<hasil<<endl;
 		goto menu;
 
 	case 11:
 		cout<<"Masukan inputan untuk log               : ";
-     	cin>>a;
-     	hasil=log(a);
+     	cin>>ex;
+     	hasil=log(ex);
     	 cout<<"hasil lognya adalah                     : "<<hasil<<endl;
 		goto menu;
 
@@ -166,8 +167,8 @@ printf(" 	Ni Ketut Reiska Rianti Widatania 2005551033 \n\n");
 
 	case 13:
 		cout<<"Masukan inputan untuk exponen           : ";
-    	cin>>a;
-     	hasil=exp(a);
+    	cin>>ex;
+     	hasil=exp(ex);
      	cout<<"hasil exponennya adalah                 : "<<hasil<<endl;
      	goto menu;
 
