@@ -56,8 +56,6 @@ Printf(“      |     UNIVERSITAS UDAYANA     |\n\n");
     printf("\t8. Waktu\t");                 printf("\t18. Perhitungan Tanggal\n");
     printf("\t9. Kuadrat\t");               printf("\t19. Energi\n");
     printf("\t10. Akar\t");                 printf("\t20. VolumeKubus Dan Bola\n");
-    Printf(“\t11. Keluar\t”);               Printf(“\t21. Keluar dari program\n”);
-
 
     printf("Pilih menu : ");
     scanf("%d",&menu);
