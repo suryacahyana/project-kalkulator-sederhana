@@ -29,10 +29,15 @@ int main(){
 	int main(int argc, char** argv);
 	int CM, m, KM, S, E, F;
 
+printf(“Selamat datang di program kalkulator sederhana ini   \n\n);
+printf(“Selamat mencoba   \n\n);
+printf(“Semoga bermanfaat untuk kalian  \n\n)<<endl;
+
 printf("TUGAS PEMROGRAMAN AHKIR (KALKULATOR)                \n\n");
 printf(" Oleh : Nyoman Gede Surya Cahyana Putra 2005551136 \n\n");
-printf(" 	Angelin Lilin 20055511447     \n\n");
+printf(" 	Angelin Liling 20055511447     \n\n");
 printf(" 	Ni Ketut Reiska Rianti Widatania 2005551033 \n\n");
+Printf(“      |     UNIVERSITAS UDAYANA     |\n\n");
 
     printf("==============================================================================================\n");
     printf("				Program Kalkulator Sederhana\n");
@@ -460,6 +465,5 @@ printf(" 	Ni Ketut Reiska Rianti Widatania 2005551033 \n\n");
 	end:
     return 0;
 }
-
 
 
